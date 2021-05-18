@@ -1,7 +1,5 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux'
 import thunk from 'redux-thunk'
-// saga
-import createSagaMiddleware from 'redux-saga'
 import { composeWithDevTools } from 'redux-devtools-extension'
 import { weatherReducer } from './weather/weatherReducers'
 import { favoritesReducer } from './favorites/favoritesReducers'
@@ -22,9 +20,6 @@ const initialState = {
 }
 
 const middleware = [thunk]
-// const sagaMiddleware = createSagaMiddleware()
-
-// sagaMiddleware.run()
 
 const store = createStore(
   reducer,
